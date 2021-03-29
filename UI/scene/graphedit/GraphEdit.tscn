@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scene/graphedit/GraphEdit.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="GraphEdit" type="GraphEdit" parent="."]
+margin_right = 1019.0
+margin_bottom = 588.0
+scroll_offset = Vector2( -287, -151 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

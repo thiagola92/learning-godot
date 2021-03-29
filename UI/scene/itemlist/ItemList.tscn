@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scene/itemlist/ItemList.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ItemList" type="ItemList" parent="."]
+margin_right = 83.0
+margin_bottom = 72.0
+items = [ "First", null, false, "Second", null, false, "Third", null, false, "Fourth", null, false, "Fifth", null, false ]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="item_selected" from="ItemList" to="ItemList" method="_on_ItemList_item_selected"]

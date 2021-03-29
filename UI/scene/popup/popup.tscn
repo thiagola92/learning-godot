@@ -1,0 +1,170 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scene/popup/Button3.gd" type="Script" id=1]
+[ext_resource path="res://scene/popup/Button4.gd" type="Script" id=2]
+[ext_resource path="res://scene/popup/Button2.gd" type="Script" id=3]
+[ext_resource path="res://scene/popup/Button.gd" type="Script" id=4]
+[ext_resource path="res://scene/popup/Button7.gd" type="Script" id=5]
+[ext_resource path="res://scene/popup/Button5.gd" type="Script" id=6]
+[ext_resource path="res://scene/popup/Button6.gd" type="Script" id=7]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+margin_right = 105.0
+margin_bottom = 22.0
+text = "WindowDialog"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WindowDialog" type="WindowDialog" parent="Button"]
+visible = true
+margin_left = 105.0
+margin_top = 20.1038
+margin_right = 578.0
+margin_bottom = 297.104
+window_title = "Window Title"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_top = 204.104
+margin_right = 96.0
+margin_bottom = 224.104
+text = "AcceptDialog"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AcceptDialog" type="AcceptDialog" parent="Button2"]
+visible = true
+margin_left = 96.0
+margin_top = 20.0
+margin_right = 356.0
+margin_bottom = 227.0
+resizable = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_top = 297.104
+margin_right = 92.0
+margin_bottom = 317.104
+text = "PopupDialog"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupDialog" type="PopupDialog" parent="Button3"]
+visible = true
+margin_left = 92.0
+margin_right = 383.0
+margin_bottom = 202.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="."]
+margin_top = 82.1038
+margin_right = 88.0
+margin_bottom = 102.104
+text = "PopupMenu"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupMenu" type="PopupMenu" parent="Button4"]
+margin_left = 88.0
+margin_right = 252.0
+margin_bottom = 110.0
+hide_on_item_selection = false
+hide_on_checkable_item_selection = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WindowDialog" type="WindowDialog" parent="Button4/PopupMenu"]
+visible = true
+margin_left = 164.0
+margin_top = 20.0
+margin_right = 247.0
+margin_bottom = 60.0
+window_title = "Ninth"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="."]
+margin_top = 389.104
+margin_right = 127.0
+margin_bottom = 409.104
+text = "ConfirmationDialog"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="Button5"]
+visible = true
+margin_left = 134.0
+margin_top = 20.0
+margin_right = 334.0
+margin_bottom = 90.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button6" type="Button" parent="."]
+margin_top = 467.104
+margin_right = 75.0
+margin_bottom = 487.104
+text = "FileDialog"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FileDialog" type="FileDialog" parent="Button6"]
+visible = true
+margin_left = 75.0
+margin_top = 20.0
+margin_right = 680.0
+margin_bottom = 292.0
+resizable = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button7" type="Button" parent="."]
+margin_left = 578.0
+margin_top = 2.1038
+margin_right = 590.0
+margin_bottom = 22.1038
+text = "PopupPanel"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupPanel" type="PopupPanel" parent="Button7"]
+visible = true
+margin_left = 87.0
+margin_right = 225.0
+margin_bottom = 124.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_Button3_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_Button4_pressed"]
+[connection signal="pressed" from="Button5" to="Button5" method="_on_Button5_pressed"]
+[connection signal="pressed" from="Button6" to="Button6" method="_on_Button6_pressed"]
+[connection signal="pressed" from="Button7" to="Button7" method="_on_Button7_pressed"]
