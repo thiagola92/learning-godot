@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scene/tabs/Tabs.gd" type="Script" id=1]
+[ext_resource path="res://scene/tabs/Tabs2.gd" type="Script" id=2]
+[ext_resource path="res://scene/tabs/Tabs3.gd" type="Script" id=3]
+[ext_resource path="res://scene/tabs/Tabs4.gd" type="Script" id=4]
+[ext_resource path="res://scene/tabs/Tabs5.gd" type="Script" id=5]
+[ext_resource path="res://scene/tabs/Tabs6.gd" type="Script" id=6]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Tabs" type="Tabs" parent="."]
+margin_right = 806.0
+margin_bottom = 24.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tabs2" type="Tabs" parent="."]
+margin_top = 23.4054
+margin_right = 336.0
+margin_bottom = 47.4054
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tabs3" type="Tabs" parent="."]
+margin_top = 47.0
+margin_right = 66.0
+margin_bottom = 71.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tabs4" type="Tabs" parent="."]
+margin_top = 71.0
+margin_right = 355.0
+margin_bottom = 95.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tabs5" type="Tabs" parent="."]
+margin_top = 95.0
+margin_right = 745.0
+margin_bottom = 119.0
+drag_to_rearrange_enabled = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tabs6" type="Tabs" parent="."]
+margin_top = 119.0
+margin_right = 777.0
+margin_bottom = 143.0
+tab_close_display_policy = 1
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="reposition_active_tab_request" from="Tabs5" to="Tabs5" method="_on_Tabs5_reposition_active_tab_request"]
+[connection signal="tab_close" from="Tabs6" to="Tabs6" method="_on_Tabs6_tab_close"]

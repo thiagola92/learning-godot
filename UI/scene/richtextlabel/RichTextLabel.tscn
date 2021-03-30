@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scene/richtextlabel/RichTextLabel.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 1015.0
+margin_bottom = 593.0
+bbcode_enabled = true
+bbcode_text = "RichTextLabel let you use [color=blue]one[/color] label with [color=red]many[/color] properties
+[b]bold[/b]
+[i]italic[/i]
+[u]underline[/u]
+[s]strikethrough[/s]
+[code]code[/code]
+[center]center[/center]
+[right]right[/right]
+[fill]fill[/fill]
+[indent]indent[/indent]
+[url]https://www.google.com[/url]
+[url=https://www.google.com]url[/url]"
+text = "RichTextLabel let you use one label with many properties
+bold
+italic
+underline
+strikethrough
+code
+center
+right
+fill
+	indent
+https://www.google.com
+url"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="meta_clicked" from="RichTextLabel" to="RichTextLabel" method="_on_RichTextLabel_meta_clicked"]

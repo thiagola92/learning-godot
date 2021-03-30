@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scene/videoplayer/xd_animation_meme.webm" type="VideoStream" id=1]
+[ext_resource path="res://scene/videoplayer/Button.gd" type="Script" id=2]
+[ext_resource path="res://scene/videoplayer/Button2.gd" type="Script" id=3]
+[ext_resource path="res://scene/videoplayer/VideoPlayer.gd" type="Script" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_left = 0.943848
+margin_right = 652.944
+margin_bottom = 343.0
+stream = ExtResource( 1 )
+volume_db = -15.0
+autoplay = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 0.943848
+margin_top = 343.0
+margin_right = 99.9438
+margin_bottom = 369.0
+text = ">"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 99.9438
+margin_top = 343.0
+margin_right = 198.944
+margin_bottom = 369.0
+text = "||"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="finished" from="VideoPlayer" to="VideoPlayer" method="_on_VideoPlayer_finished"]
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_Button2_pressed"]
