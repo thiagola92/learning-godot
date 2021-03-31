@@ -1,0 +1,41 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_left = 2.0
+margin_top = -1.0
+margin_right = 533.0
+margin_bottom = 160.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CenterContainer"]
+margin_left = 11.0
+margin_top = 70.0
+margin_right = 520.0
+margin_bottom = 90.0
+text = "This button cannot be moved and will always be at the center of the container"
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+margin_left = 522.0
+margin_right = 1021.0
+margin_bottom = 160.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CenterContainer2"]
+margin_left = 229.0
+margin_top = 70.0
+margin_right = 269.0
+margin_bottom = 90.0
+text = "First"
+
+[node name="Button2" type="Button" parent="CenterContainer2"]
+margin_left = 81.0
+margin_top = 70.0
+margin_right = 417.0
+margin_bottom = 90.0
+text = "Putting two elements, will put one in front of other"

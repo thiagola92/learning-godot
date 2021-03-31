@@ -1,0 +1,31 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 869.0
+margin_bottom = 58.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSplitContainer" type="VSplitContainer" parent="HBoxContainer"]
+margin_right = 55.0
+margin_bottom = 58.0
+
+[node name="Button" type="Button" parent="HBoxContainer/VSplitContainer"]
+margin_right = 55.0
+margin_bottom = 20.0
+text = "Button"
+
+[node name="Button2" type="Button" parent="HBoxContainer/VSplitContainer"]
+margin_top = 32.0
+margin_right = 55.0
+margin_bottom = 58.0
+text = "Button"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+margin_left = 59.0
+margin_right = 114.0
+margin_bottom = 58.0
+text = "Button"
