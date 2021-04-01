@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/getmoney.ogg-62e8040ffb56b12606f594b9282f760f.oggstr"
+
+[deps]
+
+source_file="res://scene/audioStreamplayer2d/getmoney.ogg"
+dest_files=[ "res://.import/getmoney.ogg-62e8040ffb56b12606f594b9282f760f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

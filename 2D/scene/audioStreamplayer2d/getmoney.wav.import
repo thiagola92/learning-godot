@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/getmoney.wav-b54c4e890b8ae2e21d2f1b3809d7256e.sample"
+
+[deps]
+
+source_file="res://scene/audioStreamplayer2d/getmoney.wav"
+dest_files=[ "res://.import/getmoney.wav-b54c4e890b8ae2e21d2f1b3809d7256e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
