@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scene/textedit/TextEdit12.gd" type="Script" id=1]
 
 [node name="Node2D" type="Node2D"]
 
@@ -47,10 +49,10 @@ __meta__ = {
 }
 
 [node name="TextEdit9" type="TextEdit" parent="."]
-margin_left = 536.0
-margin_top = 208.0
-margin_right = 804.0
-margin_bottom = 311.0
+margin_left = 268.0
+margin_top = 519.0
+margin_right = 536.0
+margin_bottom = 596.0
 text = "Click
 at
 left
@@ -89,10 +91,10 @@ __meta__ = {
 }
 
 [node name="TextEdit6" type="TextEdit" parent="."]
-margin_left = 536.0
-margin_top = 133.0
-margin_right = 804.0
-margin_bottom = 208.0
+margin_left = 268.0
+margin_top = 444.0
+margin_right = 536.0
+margin_bottom = 519.0
 text = "Show
 Line
 Number"
@@ -102,9 +104,9 @@ __meta__ = {
 }
 
 [node name="TextEdit5" type="TextEdit" parent="."]
-margin_left = 536.0
-margin_right = 804.0
-margin_bottom = 133.0
+margin_top = 444.0
+margin_right = 268.0
+margin_bottom = 596.0
 custom_colors/member_variable_color = Color( 1, 0, 0, 1 )
 custom_colors/code_folding_color = Color( 1, 0.376471, 0, 1 )
 custom_colors/function_color = Color( 1, 0.796078, 0, 1 )
@@ -166,3 +168,54 @@ really"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextEdit12" type="TextEdit" parent="."]
+margin_left = 536.0
+margin_top = -1.0
+margin_right = 1018.0
+margin_bottom = 596.0
+text = "extends TextEdit
+
+
+func _ready():
+	pass
+
+
+func _on_TextEdit12_symbol_lookup(symbol, row, column):
+	print(\"---symbol_lookup---\")
+	print(\"symbol\", symbol)
+	print(\"row\", row)
+	print(\"column\", column)
+
+
+func _on_TextEdit12_request_completion():
+	print(\"---request_completion---\")
+
+
+func _on_TextEdit12_text_changed():
+	print(\"---text_changed---\")
+
+
+func _on_TextEdit12_info_clicked(row, info):
+	print(\"---info_clicked---\")
+	print(\"info\", info)
+	print(\"row\", row)
+"
+highlight_current_line = true
+syntax_highlighting = true
+show_line_numbers = true
+draw_tabs = true
+breakpoint_gutter = true
+fold_gutter = true
+highlight_all_occurrences = true
+minimap_draw = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="breakpoint_toggled" from="TextEdit12" to="TextEdit12" method="_on_TextEdit12_breakpoint_toggled"]
+[connection signal="cursor_changed" from="TextEdit12" to="TextEdit12" method="_on_TextEdit12_cursor_changed"]
+[connection signal="info_clicked" from="TextEdit12" to="TextEdit12" method="_on_TextEdit12_info_clicked"]
+[connection signal="request_completion" from="TextEdit12" to="TextEdit12" method="_on_TextEdit12_request_completion"]
+[connection signal="symbol_lookup" from="TextEdit12" to="TextEdit12" method="_on_TextEdit12_symbol_lookup"]
+[connection signal="text_changed" from="TextEdit12" to="TextEdit12" method="_on_TextEdit12_text_changed"]
