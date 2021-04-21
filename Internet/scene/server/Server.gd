@@ -12,22 +12,19 @@ func _on_Button_pressed():
 	if get_tree().network_peer != null:
 		return
 	
-	var peer = NetworkedMultiplayerENet.new()
 	var port = int($LineEdit.text)
 	
-	peer.create_server(port, 2)
+	var peer = NetworkedMultiplayerENet.new()
+	var error = peer.create_server(port, 2)
+	
 	get_tree().network_peer = peer
 	
-	if get_tree().network_peer == null:
-		print("Invalid port")
-	else:
-		print("Waiting for connection on %s" % port)
+	if error != 0:
+		print("Error: %s" % error)
 
 
 func _on_Button2_pressed():
-	if get_tree().network_peer != null:
-		get_tree().network_peer = null
-		print("Server closed")
+	get_tree().network_peer = null
 
 
 func _on_Node_network_peer_connected(id):

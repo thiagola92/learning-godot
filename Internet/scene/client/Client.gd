@@ -15,17 +15,16 @@ func _on_Button_pressed():
 	var port = int($LineEdit2.text)
 	
 	var peer = NetworkedMultiplayerENet.new()
-	peer.create_client(ip, port)
+	var error = peer.create_client(ip, port)
+	
 	get_tree().network_peer = peer
 	
-	if get_tree().network_peer == null:
-		print("Invalid ip or port")
+	if error != 0:
+		print("Error: %s" % error)
 
 
 func _on_Button2_pressed():
-	if get_tree().network_peer != null:
-		get_tree().network_peer = null
-		print("Disconnected from server")
+	get_tree().network_peer = null
 
 
 func _on_Node_network_peer_connected(id):
