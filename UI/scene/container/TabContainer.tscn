@@ -10,7 +10,6 @@ __meta__ = {
 }
 
 [node name="Tab1" type="Button" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -57,12 +56,13 @@ rect_min_size = Vector2( 50, 50 )
 color = Color( 0.0470588, 0.133333, 0.470588, 1 )
 
 [node name="Tab4" type="VBoxContainer" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = -337.0
-margin_bottom = -119.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="Button" type="Button" parent="TabContainer/Tab4"]
 margin_right = 273.0

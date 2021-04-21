@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scene/popup/Button3.gd" type="Script" id=1]
 [ext_resource path="res://scene/popup/Button4.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scene/popup/Button7.gd" type="Script" id=5]
 [ext_resource path="res://scene/popup/Button5.gd" type="Script" id=6]
 [ext_resource path="res://scene/popup/Button6.gd" type="Script" id=7]
+[ext_resource path="res://scene/popup/Button8.gd" type="Script" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -161,6 +162,23 @@ margin_bottom = 124.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button8" type="Button" parent="."]
+margin_left = 578.0
+margin_top = 142.104
+margin_right = 630.0
+margin_bottom = 162.104
+text = "Popup"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Popup" type="Popup" parent="Button8"]
+visible = true
+margin_left = 52.0
+margin_right = 225.0
+margin_bottom = 155.0
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_Button2_pressed"]
 [connection signal="pressed" from="Button3" to="Button3" method="_on_Button3_pressed"]
@@ -168,3 +186,4 @@ __meta__ = {
 [connection signal="pressed" from="Button5" to="Button5" method="_on_Button5_pressed"]
 [connection signal="pressed" from="Button6" to="Button6" method="_on_Button6_pressed"]
 [connection signal="pressed" from="Button7" to="Button7" method="_on_Button7_pressed"]
+[connection signal="pressed" from="Button8" to="Button8" method="_on_Button8_pressed"]
