@@ -10,13 +10,12 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [application]
 
 config/name="Internet"
-run/main_scene="res://scene/server/Server.tscn"
+run/main_scene="res://scene/chat_example/Chat.tscn"
 config/icon="res://icon.png"
 
 [rendering]
