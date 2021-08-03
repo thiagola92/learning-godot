@@ -1,6 +1,6 @@
 extends Node
 
-var Player = preload("res://scene/movement_example/Player.tscn")
+var Player = preload("res://scene/movement_example_2/Player.tscn")
 var rng = RandomNumberGenerator.new()
 
 var ip = '127.0.0.1'
@@ -28,6 +28,7 @@ func _add_player(id : int):
 	players[id] = Player.instance()
 	players[id].generate_color(rng)
 	players[id].name = String(id)
+	players[id].set_network_master(id)
 	add_child(players[id])
 
 

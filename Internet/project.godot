@@ -15,7 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Internet"
-run/main_scene="res://scene/movement_example/Scene.tscn"
+run/main_scene="res://scene/movement_example_2/Scene.tscn"
 config/icon="res://icon.png"
 
 [input]

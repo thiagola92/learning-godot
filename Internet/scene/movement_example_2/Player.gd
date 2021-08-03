@@ -35,5 +35,5 @@ func _read_input():
 		rpc("_move", direction)
 
 
-remotesync func _move(direction):
+puppetsync func _move(direction):
 	rect_position += direction
