@@ -11,36 +11,48 @@ __meta__ = {
 }
 
 [node name="Left" type="VBoxContainer" parent="."]
-margin_right = 59.0
+margin_right = 63.0
 margin_bottom = 600.0
 
 [node name="Id" type="LineEdit" parent="Left"]
-margin_right = 59.0
+margin_right = 63.0
 margin_bottom = 24.0
 caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="Remote" type="Button" parent="Left"]
 margin_top = 28.0
-margin_right = 59.0
+margin_right = 63.0
 margin_bottom = 48.0
 text = "remote"
 
 [node name="Master" type="Button" parent="Left"]
 margin_top = 52.0
-margin_right = 59.0
+margin_right = 63.0
 margin_bottom = 72.0
 text = "master"
 
 [node name="Puppet" type="Button" parent="Left"]
 margin_top = 76.0
-margin_right = 59.0
+margin_right = 63.0
 margin_bottom = 96.0
 text = "puppet"
 
+[node name="IP" type="LineEdit" parent="Left"]
+margin_top = 552.0
+margin_right = 63.0
+margin_bottom = 576.0
+size_flags_vertical = 10
+
+[node name="Connect" type="Button" parent="Left"]
+margin_top = 580.0
+margin_right = 63.0
+margin_bottom = 600.0
+text = "connect"
+
 [node name="Right" type="VBoxContainer" parent="."]
-margin_left = 543.0
-margin_right = 543.0
+margin_left = 545.0
+margin_right = 545.0
 margin_bottom = 600.0
 size_flags_horizontal = 6
 size_flags_vertical = 3
@@ -48,3 +60,4 @@ size_flags_vertical = 3
 [connection signal="pressed" from="Left/Remote" to="." method="_on_Remote_pressed"]
 [connection signal="pressed" from="Left/Master" to="." method="_on_Master_pressed"]
 [connection signal="pressed" from="Left/Puppet" to="." method="_on_Puppet_pressed"]
+[connection signal="pressed" from="Left/Connect" to="." method="_make_connection"]
