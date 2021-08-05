@@ -39,16 +39,22 @@ margin_bottom = 96.0
 text = "puppet"
 
 [node name="IP" type="LineEdit" parent="Left"]
-margin_top = 552.0
+margin_top = 534.0
 margin_right = 63.0
-margin_bottom = 576.0
+margin_bottom = 558.0
 size_flags_vertical = 10
 
 [node name="Connect" type="Button" parent="Left"]
-margin_top = 580.0
+margin_top = 562.0
+margin_right = 63.0
+margin_bottom = 582.0
+text = "connect"
+
+[node name="Status" type="Label" parent="Left"]
+margin_top = 586.0
 margin_right = 63.0
 margin_bottom = 600.0
-text = "connect"
+custom_colors/font_color = Color( 0.894118, 0.0117647, 0.0117647, 1 )
 
 [node name="Right" type="VBoxContainer" parent="."]
 margin_left = 545.0

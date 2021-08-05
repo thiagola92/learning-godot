@@ -15,8 +15,10 @@ func _ready():
 func _make_connection():
 	var ip = $Left/IP.text
 	
-	if peer.create_server(port) != OK:
-		peer.create_client(ip, port)
+	# Try connect to a server, otherwise try be a server
+	if peer.create_client(ip, port) != OK:
+		if peer.create_server(port) != OK:
+			$Left/Status.text = "FAIL"
 	
 	get_tree().network_peer = peer
 	_add_child(
@@ -48,9 +50,6 @@ func _on_Master_pressed():
 
 func _on_Puppet_pressed():
 	var id = int($Left/Id.text)
-	
-	for p in players:
-		print(p, ' ',players[p].is_network_master())
 	
 	if id in players:
 		players[id].rpc("puppet_button")
