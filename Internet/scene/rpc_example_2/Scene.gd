@@ -12,13 +12,23 @@ func _ready():
 	get_tree().connect("network_peer_connected", self, "_add_child")
 
 
-func _make_connection():
+func _connect_to_server():
 	var ip = $Left/IP.text
 	
-	# Try connect to a server, otherwise try be a server
 	if peer.create_client(ip, port) != OK:
-		if peer.create_server(port) != OK:
-			$Left/Status.text = "FAIL"
+		$Left/Status.text = 'FAIL CONNECT TO SERVER'
+		return
+	
+	get_tree().network_peer = peer
+	_add_child(
+		get_tree().get_network_unique_id()
+	)
+
+
+func _create_a_server():
+	if peer.create_server(port) != OK:
+		$Left/Status.text = 'FAIL CREATE A SERVER'
+		return
 	
 	get_tree().network_peer = peer
 	_add_child(
