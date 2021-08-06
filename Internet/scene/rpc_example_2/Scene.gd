@@ -10,6 +10,7 @@ var players = {}
 
 func _ready():
 	get_tree().connect("network_peer_connected", self, "_add_child")
+	get_tree().connect("network_peer_disconnected", self, "_lost_connection")
 
 
 func _connect_to_server():
@@ -42,6 +43,10 @@ func _add_child(id : int):
 	players[id].get_node("Id").text = str(id)
 	players[id].set_network_master(id)
 	$Right.add_child(players[id])
+
+
+func _lost_connection(id : int):
+	players[id].lost_connection()
 
 
 func _on_Remote_pressed():

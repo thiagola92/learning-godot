@@ -26,6 +26,10 @@ puppet func puppet_button():
 	$Historic/Methods/PuppetTimer.start()
 
 
+func lost_connection():
+	$Id.text += "  (lost connection)"
+
+
 func _on_RemoteTimer_timeout():
 	$Historic/Methods/RemoteLabel.set("custom_colors/font_color", Color("ffffff"))
 
