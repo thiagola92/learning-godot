@@ -11,6 +11,9 @@ var players = {}
 func _ready():
 	get_tree().connect("network_peer_connected", self, "_add_child")
 	get_tree().connect("network_peer_disconnected", self, "_lost_connection")
+	
+	for interface in IP.get_local_interfaces():
+		print(interface)
 
 
 func _connect_to_server():
