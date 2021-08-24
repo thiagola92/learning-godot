@@ -75,6 +75,7 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="reposition_active_tab_request" from="Tabs5" to="Tabs5" method="_on_Tabs5_reposition_active_tab_request"]
 [connection signal="tab_close" from="Tabs6" to="Tabs6" method="_on_Tabs6_tab_close"]
 [connection signal="tab_close" from="Tabs7" to="Tabs7" method="_on_Tabs6_tab_close"]

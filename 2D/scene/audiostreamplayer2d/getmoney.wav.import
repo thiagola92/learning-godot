@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/getmoney.wav-b54c4e890b8ae2e21d2f1b3809d7256e.sample"
+path="res://.import/getmoney.wav-7266aa7bfbe7182d7e1438fe952cf30e.sample"
 
 [deps]
 
-source_file="res://scene/audioStreamplayer2d/getmoney.wav"
-dest_files=[ "res://.import/getmoney.wav-b54c4e890b8ae2e21d2f1b3809d7256e.sample" ]
+source_file="res://scene/audiostreamplayer2d/getmoney.wav"
+dest_files=[ "res://.import/getmoney.wav-7266aa7bfbe7182d7e1438fe952cf30e.sample" ]
 
 [params]
 

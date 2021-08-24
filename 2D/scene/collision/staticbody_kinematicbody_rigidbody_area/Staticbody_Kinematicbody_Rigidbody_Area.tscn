@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
-[ext_resource path="res://scene/staticbody_kinematicbody_rigidbody_area/Staticbody_Kinematicbody_Rigidbody_Area.gd" type="Script" id=2]
-[ext_resource path="res://scene/staticbody_kinematicbody_rigidbody_area/Area2D.gd" type="Script" id=3]
-[ext_resource path="res://scene/staticbody_kinematicbody_rigidbody_area/RigidBody2D2.gd" type="Script" id=4]
+[ext_resource path="res://scene/collision/staticbody_kinematicbody_rigidbody_area/Staticbody_Kinematicbody_Rigidbody_Area.gd" type="Script" id=2]
+[ext_resource path="res://scene/collision/staticbody_kinematicbody_rigidbody_area/Area2D.gd" type="Script" id=3]
+[ext_resource path="res://scene/collision/staticbody_kinematicbody_rigidbody_area/RigidBody2D2.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 31.1538 )
