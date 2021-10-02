@@ -6,4 +6,4 @@ func _ready():
 	
 func _process(delta):
 	# the addition need to be bigger than the self.step
-	self.value += delta * 1
+	self.value += delta * 3

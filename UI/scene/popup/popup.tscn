@@ -179,6 +179,7 @@ visible = true
 margin_left = 52.0
 margin_right = 225.0
 margin_bottom = 155.0
+
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_Button2_pressed"]
 [connection signal="pressed" from="Button3" to="Button3" method="_on_Button3_pressed"]
