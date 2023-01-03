@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb4ff2ge0uc8r"]
+
+[ext_resource type="Script" path="res://scene/audio_listener_2d.gd" id="1_e25m5"]
+[ext_resource type="AudioStream" uid="uid://dmr42orm3terq" path="res://res/funk_soul_brother.mp3" id="2_6nyli"]
+
+[node name="AudioListener2D" type="AudioListener2D"]
+position = Vector2(1403, 1)
+script = ExtResource("1_e25m5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1633, 0)
+stream = ExtResource("2_6nyli")
+autoplay = true
