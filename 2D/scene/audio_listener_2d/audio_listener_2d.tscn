@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cb4ff2ge0uc8r"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://scene/audio_listener_2d.gd" id="1_e25m5"]
+[ext_resource type="Script" path="res://scene/audio_listener_2d/audio_listener_2d.gd" id="1_e25m5"]
 [ext_resource type="AudioStream" uid="uid://dmr42orm3terq" path="res://res/funk_soul_brother.mp3" id="2_6nyli"]
 
 [node name="AudioListener2D" type="AudioListener2D"]

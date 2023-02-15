@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dsy2hkptvghot" path="res://res/icon1.svg" id="2_2qgmn"]
 [ext_resource type="Texture2D" uid="uid://ciwi2pswcdmwy" path="res://res/icon2.svg" id="3_25vv0"]
 [ext_resource type="Texture2D" uid="uid://cbdyseftwyaeo" path="res://res/icon3.svg" id="4_wtas6"]
-[ext_resource type="Script" path="res://scene/animated_sprite_2d.gd" id="5_nii6n"]
+[ext_resource type="Script" path="res://scene/animated_sprite_2d/animated_sprite_2d.gd" id="5_nii6n"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0s3bk"]
 animations = [{

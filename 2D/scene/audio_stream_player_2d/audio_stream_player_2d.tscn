@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://crcgiyu7fc4kv"]
+
+[ext_resource type="AudioStream" uid="uid://dmr42orm3terq" path="res://res/funk_soul_brother.mp3" id="1_oi4aa"]
+[ext_resource type="Script" path="res://scene/audio_stream_player_2d/music_button.gd" id="2_ybns1"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_6t0am"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_oi4aa")
+
+[node name="MusicButton" type="Button" parent="."]
+offset_left = 90.0
+offset_right = 144.0
+offset_bottom = 31.0
+text = "Play music"
+script = ExtResource("2_ybns1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamMicrophone_6t0am")
+autoplay = true
+
+[connection signal="pressed" from="MusicButton" to="MusicButton" method="_on_pressed"]
