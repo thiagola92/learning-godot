@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgl1jhkee80wx"]
+
+[ext_resource type="Script" path="res://refcounter/fourth/fourth.gd" id="1_0sjjj"]
+
+[node name="Fourth" type="Node2D"]
+script = ExtResource("1_0sjjj")
