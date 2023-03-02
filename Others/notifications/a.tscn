@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1qcugn1vlm86"]
+
+[ext_resource type="Script" path="res://notifications/same.gd" id="1_0yydb"]
+
+[node name="A" type="Node"]
+script = ExtResource("1_0yydb")
