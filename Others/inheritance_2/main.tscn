@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1ge6t6ryk7ev"]
+
+[ext_resource type="Script" path="res://inheritance_2/main.gd" id="1_cbcpi"]
+[ext_resource type="Script" path="res://inheritance_2/main2.gd" id="2_m1rlv"]
+[ext_resource type="Script" path="res://inheritance_2/main3.gd" id="3_ko4pj"]
+
+[node name="Node" type="Node"]
+
+[node name="Main" type="Node2D" parent="."]
+script = ExtResource("1_cbcpi")
+
+[node name="Main2" type="Node2D" parent="."]
+script = ExtResource("2_m1rlv")
+
+[node name="Main3" type="Node" parent="."]
+script = ExtResource("3_ko4pj")
