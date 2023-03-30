@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://enu185031u3t"]
+
+[ext_resource type="Script" path="res://scene/static_body_2d/static_body_2d.gd" id="1_yl6ni"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vb3sx"]
+radius = 25.0799
+
+[node name="Node2D" type="Node2D"]
+
+[node name="A" type="CharacterBody2D" parent="."]
+position = Vector2(-217, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="A"]
+shape = SubResource("CircleShape2D_vb3sx")
+
+[node name="B" type="StaticBody2D" parent="."]
+script = ExtResource("1_yl6ni")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="B"]
+shape = SubResource("CircleShape2D_vb3sx")
+
+[node name="Camera2D" type="Camera2D" parent="."]

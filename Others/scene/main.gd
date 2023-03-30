@@ -1,5 +1,9 @@
 extends Node2D
 
 
-func _init(x):
-	print(x)
+func _init():
+	print_hi()
+
+
+func print_hi():
+	print("hi")

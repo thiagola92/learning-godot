@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://r8mj34458lja"]
+
+[ext_resource type="Script" path="res://scene/animatable_body_2d/animatable_body_2d.gd" id="1_le4j8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vb3sx"]
+radius = 25.0799
+
+[sub_resource type="Animation" id="Animation_3dp8o"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-363, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x3uly"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_avrpo"]
+_data = {
+"RESET": SubResource("Animation_x3uly"),
+"new_animation": SubResource("Animation_3dp8o")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="A" type="CharacterBody2D" parent="."]
+position = Vector2(-217, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="A"]
+shape = SubResource("CircleShape2D_vb3sx")
+
+[node name="B" type="AnimatableBody2D" parent="."]
+script = ExtResource("1_le4j8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="B"]
+shape = SubResource("CircleShape2D_vb3sx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="B"]
+libraries = {
+"": SubResource("AnimationLibrary_avrpo")
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]

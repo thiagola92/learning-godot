@@ -1,8 +1,8 @@
-class_name Second
+class_name Fourth
 extends First
 
 
-signal second_script
+signal fourth_script
 
 @export var second: int = 0
 

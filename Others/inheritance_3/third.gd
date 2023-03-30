@@ -1,8 +1,8 @@
-class_name First
+class_name Third
 extends Node2D
 
 
-signal first_script
+signal third_script
 
 @export var first: int = 0
 

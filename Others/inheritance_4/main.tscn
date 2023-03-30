@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg66pxmogdnbm"]
+
+[ext_resource type="Script" path="res://inheritance_4/main.gd" id="1_r3gxr"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_r3gxr")
