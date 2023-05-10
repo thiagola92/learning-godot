@@ -10,10 +10,15 @@ config_version=5
 
 [application]
 
-config/name="Others"
-config/features=PackedStringArray("4.1", "Forward Plus")
+config/name="Plugins"
+config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/example/plugin.cfg")
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
