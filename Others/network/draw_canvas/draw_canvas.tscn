@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://0kyubs7oc61e"]
+
+[ext_resource type="Script" path="res://network/draw_canvas/draw_canvas.gd" id="1_7lb4j"]
+
+[node name="DrawCanvas" type="Node2D"]
+script = ExtResource("1_7lb4j")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://network/draw_canvas/right_click.tscn")
+spawn_path = NodePath("..")

@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbnhkrp8u8m2r"]
+
+[ext_resource type="Script" path="res://network/connect_dock/connect_dock.gd" id="1_vogom"]
+
+[node name="ConnectDock" type="HBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 8.0
+grow_horizontal = 2
+script = ExtResource("1_vogom")
+
+[node name="Host" type="Button" parent="."]
+layout_mode = 2
+text = "Host"
+
+[node name="Connect" type="Button" parent="."]
+layout_mode = 2
+text = "Connect"
+
+[node name="IP" type="LineEdit" parent="."]
+layout_mode = 2
+text = "127.0.0.1"
+placeholder_text = "ip"
+
+[node name="Port" type="LineEdit" parent="."]
+layout_mode = 2
+text = "4333"
+placeholder_text = "port"
+
+[node name="Warning" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.772549, 0, 0, 1)
+
+[connection signal="pressed" from="Host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="Connect" to="." method="_on_connect_pressed"]

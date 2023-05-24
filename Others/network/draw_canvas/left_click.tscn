@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d30d0awhjarim"]
+
+[node name="LeftClick" type="ColorRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1

@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://kto2bveiv07s"]
+
+[ext_resource type="Script" path="res://network/main.gd" id="1_joqig"]
+[ext_resource type="PackedScene" uid="uid://bbnhkrp8u8m2r" path="res://network/connect_dock/connect_dock.tscn" id="1_lhcg4"]
+[ext_resource type="PackedScene" uid="uid://0kyubs7oc61e" path="res://network/draw_canvas/draw_canvas.tscn" id="3_oeox5"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_fi74h"]
+properties/0/path = NodePath("ConnCount:text")
+properties/0/spawn = true
+properties/0/sync = true
+
+[node name="Main" type="Node"]
+script = ExtResource("1_joqig")
+
+[node name="ConnectDock" parent="." instance=ExtResource("1_lhcg4")]
+
+[node name="DrawCanvas" parent="." instance=ExtResource("3_oeox5")]
+visible = false
+
+[node name="Id" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+
+[node name="ConnCount" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "1"
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_fi74h")
+
+[connection signal="connect" from="ConnectDock" to="." method="_on_connect_dock_connect"]
+[connection signal="host" from="ConnectDock" to="." method="_on_connect_dock_host"]

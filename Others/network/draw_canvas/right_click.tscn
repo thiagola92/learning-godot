@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxepelo0ehyiu"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_fsxot"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/sync = true
+
+[node name="RightClick" type="ColorRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+color = Color(1, 0, 0, 1)
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_fsxot")
