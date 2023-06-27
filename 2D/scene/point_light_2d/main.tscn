@@ -1,17 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://mlvrg4l6kpqn"]
+[gd_scene load_steps=5 format=3 uid="uid://mlvrg4l6kpqn"]
 
-[ext_resource type="Texture2D" uid="uid://dlwmj5d5gcpsh" path="res://res/icon0.svg" id="1_4rouy"]
-[ext_resource type="Texture2D" uid="uid://cd4jqt5g6dvqy" path="res://scene/point_light_2d/light.png" id="2_owoyo"]
+[ext_resource type="Texture2D" uid="uid://dlwmj5d5gcpsh" path="res://res/icon0.svg" id="1_xf3ty"]
+[ext_resource type="Texture2D" uid="uid://cd4jqt5g6dvqy" path="res://scene/point_light_2d/light.png" id="2_3kqxq"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_w4lj0"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gwr2c"]
 polygon = PackedVector2Array(55, -62.4, 61, -60.4, 61, -57.7, 64, -53.7, 64, 55, 62.4, 55, 60.4, 61, 57.7, 61, 53.7, 64, -53.5, 64, -61, 60.2, -61, 57.7, -64, 53.7, -64, -55, -62.4, -55, -60.4, -61, -57.5, -61, -55, -62.2, -55, -64, 55, -64)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(470, 280)
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_w4lj0")
 position = Vector2(68, 4.00001)
 scale = Vector2(10.3086, 7.46069)
-texture = ExtResource("1_4rouy")
+texture = ExtResource("1_xf3ty")
 metadata/_edit_group_ = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
@@ -19,12 +23,28 @@ position = Vector2(-256, -25)
 rotation = 0.234075
 shadow_enabled = true
 shadow_color = Color(0, 0, 0, 1)
-texture = ExtResource("2_owoyo")
+texture = ExtResource("2_3kqxq")
+offset = Vector2(256, 0)
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(205, -70)
+rotation = 2.10304
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 1)
+texture = ExtResource("2_3kqxq")
+offset = Vector2(256, 0)
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(157, -172)
+rotation = 1.7629
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 1)
+texture = ExtResource("2_3kqxq")
 offset = Vector2(256, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(94, 96)
-texture = ExtResource("1_4rouy")
+texture = ExtResource("1_xf3ty")
 metadata/_edit_group_ = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite2D"]

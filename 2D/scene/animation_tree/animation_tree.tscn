@@ -1,0 +1,105 @@
+[gd_scene load_steps=11 format=3 uid="uid://hl6i3i41j2aa"]
+
+[ext_resource type="Texture2D" uid="uid://bmoheg2luvhrh" path="res://icon.svg" id="1_imhk7"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gvgg2"]
+animation = &"attack"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_e6bi3"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_gvgg2")
+blend_point_0/pos = Vector2(-1, 0)
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dkomb"]
+animation = &"attack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_u4qyi"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ms8bd"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_juo34"]
+states/BlendSpace2D/node = SubResource("AnimationNodeBlendSpace2D_e6bi3")
+states/BlendSpace2D/position = Vector2(494, 164)
+states/Start/position = Vector2(201, 100)
+states/attack/node = SubResource("AnimationNodeAnimation_dkomb")
+states/attack/position = Vector2(494, 100)
+transitions = ["Start", "attack", SubResource("AnimationNodeStateMachineTransition_u4qyi"), "attack", "End", SubResource("AnimationNodeStateMachineTransition_ms8bd")]
+
+[sub_resource type="Animation" id="Animation_ovs04"]
+resource_name = "attack"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.45, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(66, 66), Vector2(-22, 66), Vector2(157, 66), Vector2(66, 66)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.45, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 0.5), Vector2(2, 2), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hgkf3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(66, 66)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qych4"]
+_data = {
+"RESET": SubResource("Animation_hgkf3"),
+"attack": SubResource("Animation_ovs04")
+}
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(66, 66)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_imhk7")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_juo34")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/BlendSpace2D/blend_position = Vector2(-0.7056, -0.045)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qych4")
+}

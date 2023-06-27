@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceice1w5feblc"]
+
+[ext_resource type="Script" path="res://scenes/menu_button/menu_button.gd" id="1_cn6pu"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MenuButton" type="MenuButton" parent="."]
+layout_mode = 2
+text = "EXAMPLE"
+script = ExtResource("1_cn6pu")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+text = "ADD MORE"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+text = "DELETE MORE"
+
+[connection signal="pressed" from="Button" to="MenuButton" method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="MenuButton" method="_on_button_2_pressed"]

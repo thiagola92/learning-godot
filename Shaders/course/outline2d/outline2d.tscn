@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bf0nkcinolpce"]
+
+[ext_resource type="Shader" path="res://course/outline2d/outline2d.gdshader" id="1_5jh7j"]
+[ext_resource type="Texture2D" uid="uid://c78m51nnb6uh7" path="res://sprites/robi_shaded.png" id="1_tg10e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_raa36"]
+shader = ExtResource("1_5jh7j")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 3.0
+
+[node name="Outline2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_raa36")
+position = Vector2(107, 188)
+scale = Vector2(0.440476, 0.440476)
+texture = ExtResource("1_tg10e")
+region_enabled = true
+region_rect = Rect2(-18, -12, 457, 769)

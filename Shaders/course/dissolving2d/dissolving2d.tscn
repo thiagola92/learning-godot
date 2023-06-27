@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhicgr4bvsuw1"]
+
+[ext_resource type="Shader" path="res://course/dissolving2d/dissolving2d.gdshader" id="1_av85k"]
+[ext_resource type="FastNoiseLite" uid="uid://h34dewslsxdo" path="res://course/dissolving2d/new_fast_noise_lite.tres" id="2_kd8l5"]
+[ext_resource type="Texture2D" uid="uid://c78m51nnb6uh7" path="res://sprites/robi_shaded.png" id="3_0io77"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hu6do"]
+seamless = true
+noise = ExtResource("2_kd8l5")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i0p54"]
+shader = ExtResource("1_av85k")
+shader_parameter/burn_color = Color(0.772549, 0, 0.0117647, 1)
+shader_parameter/burn_size = 1.056
+shader_parameter/dissolve_amount = 0.955
+shader_parameter/emission_amount = 0.0
+shader_parameter/dissolve_texture = SubResource("NoiseTexture2D_hu6do")
+
+[sub_resource type="Environment" id="Environment_mrx6y"]
+background_mode = 3
+glow_enabled = true
+glow_blend_mode = 0
+
+[node name="Dissolving2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_i0p54")
+position = Vector2(244, 392)
+texture = ExtResource("3_0io77")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_mrx6y")
