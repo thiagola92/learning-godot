@@ -36,6 +36,10 @@ rclick={
 ]
 }
 
+[layer_names]
+
+2d_navigation/layer_1="Ground"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
