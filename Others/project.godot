@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Others"
-run/main_scene="res://network/main.tscn"
-config/features=PackedStringArray("4.1", "Forward Plus")
+run/main_scene="uid://bve7lsd4gvae"
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [rendering]
