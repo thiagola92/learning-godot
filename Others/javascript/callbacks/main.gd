@@ -17,6 +17,17 @@ func _ready() -> void:
 	# window.onclick = JavaScriptBridge.create_callback(_on_click)
 
 
+# Godot always give you "args", this is an Object that is always
+# present in JavaScript functions (but is not showed in JavaScript).
+# https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
+# It contains all arguments passed to the function.
+# NOTE: My recommendation is not using Typing while dealing with JavaScript,
+# Godot can't deduce types and will complain even about things that JavaScriptObject
+# would be able to process (like "args[0]").
 func _on_click(args):
 	var console = JavaScriptBridge.get_interface("console")
 	console.log("Don't click me")
+	console.log(args)
+	
+	# TIP: use eval to better read javascript.
+	JavaScriptBridge.eval("console.log(arguments)")
